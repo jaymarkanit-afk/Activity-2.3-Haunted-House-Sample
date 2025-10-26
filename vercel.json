@@ -3,6 +3,12 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
+  "builds": [
+    {
+      "src": "src/index.html",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
