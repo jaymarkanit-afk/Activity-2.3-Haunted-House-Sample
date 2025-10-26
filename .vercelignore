@@ -1,0 +1,13 @@
+node_modules
+.git
+.gitignore
+README.md
+readme.md
+PROJECT_OVERVIEW.md
+IMPLEMENTATION_NOTES.md
+ALTERNATIVE_DESIGN.md
+ELECTRON_README.md
+ELECTRON_SETUP_GUIDE.md
+electron-*
+src/
+static/

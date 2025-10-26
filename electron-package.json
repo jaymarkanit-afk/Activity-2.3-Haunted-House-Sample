@@ -1,0 +1,27 @@
+{
+  "name": "3d-lighting-studio",
+  "version": "1.0.0",
+  "description": "Interactive 3D Lighting Studio - Electron.js app demonstrating Three.js lighting, shadows, and materials from Activities 2.1-2.3",
+  "main": "electron-main.js",
+  "scripts": {
+    "electron": "electron .",
+    "start": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "threejs",
+    "3d",
+    "lighting",
+    "shadows",
+    "materials"
+  ],
+  "author": "Student",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  },
+  "dependencies": {
+    "three": "^0.160.0",
+    "lil-gui": "^0.19.1"
+  }
+}

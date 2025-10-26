@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Lighting Studio - Activity 2</title>
+    <link rel="stylesheet" href="electron-styles.css">
+</head>
+<body>
+    <div id="info-panel">
+        <h1>🎨 3D Lighting Studio</h1>
+        <p class="subtitle">Activity 2: Lights, Shadows & Materials</p>
+        
+        <div class="scene-info">
+            <h3>Current Scene: <span id="scene-name">Basic Lighting Demo</span></h3>
+            <p class="instruction">Use the menu bar to switch scenes or adjust settings with the controls panel on the right.</p>
+        </div>
+
+        <div class="features">
+            <h3>Features:</h3>
+            <ul>
+                <li><strong>6 Light Types:</strong> Ambient, Directional, Hemisphere, Point, RectArea, Spot</li>
+                <li><strong>Real-time Shadows:</strong> Dynamic shadow mapping with optimization controls</li>
+                <li><strong>Material Editor:</strong> Adjust roughness, metalness, and more</li>
+                <li><strong>4 Scene Templates:</strong> Switch between different demonstrations</li>
+                <li><strong>Animated Creatures:</strong> Flying crows & bats in the Haunted House scene! 🦇🐦‍⬛</li>
+            </ul>
+        </div>
+
+        <div class="controls-hint">
+            <h3>Controls:</h3>
+            <ul>
+                <li><strong>Left Mouse:</strong> Rotate camera</li>
+                <li><strong>Right Mouse:</strong> Pan camera</li>
+                <li><strong>Scroll:</strong> Zoom in/out</li>
+                <li><strong>Menu Bar:</strong> Switch scenes, export settings</li>
+            </ul>
+        </div>
+
+        <div class="concepts">
+            <h3>Activity Concepts:</h3>
+            <div class="concept-tag">2.1 - Lights</div>
+            <div class="concept-tag">2.2 - Shadows</div>
+            <div class="concept-tag">2.3 - Complex Scenes</div>
+        </div>
+    </div>
+
+    <canvas class="webgl"></canvas>
+
+    <script src="electron-renderer.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+#info-panel {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 380px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#info-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+#info-panel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+#info-panel::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+#info-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.scene-info {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.scene-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #667eea;
+}
+
+#scene-name {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.instruction {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+
+.features, .controls-hint, .concepts {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 8px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #d0d0d0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.concept-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 5px 5px 5px 0;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* lil-gui styling override */
+.lil-gui {
+    --background-color: rgba(26, 26, 46, 0.95) !important;
+    --widget-color: rgba(102, 126, 234, 0.3) !important;
+    --focus-color: rgba(102, 126, 234, 0.6) !important;
+    --number-color: #667eea !important;
+    --string-color: #a0a0ff !important;
+    z-index: 1000 !important;
+    border-radius: 10px !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.lil-gui.root {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    #info-panel {
+        max-width: 300px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s ease-in-out infinite;
+}
